@@ -9,12 +9,18 @@ draw = function() {
     fill(0, 255, 68); 
     rect(0, 0, 400, 200);  
 
+    fill(255, 255, 68); 
+    rect(0, 200, 400, 200);  
+
     fill(0, 0, 0);
     textSize(30);
     text("Press me!", 145, 115);
 
-    if(mousePressed){
+    if(mousePressed && mouseY < 200){
         labelCanvas();
+    }
+      if(mousePressed && mouseY > 200){
+        labelCanvass();
     }
 };
 
@@ -27,8 +33,19 @@ var labelCanvas = function(){
     stroke(150);
     for(var i = 0; i < 450; i += 40){
         line(i, 200, i+20, 200);
+
+     fill (255,0,0);
+     rect(0, 0, 400, 200);  
     }
 }
+var labelCanvass = function(){
+
+    
+     fill (random(255), random(255), random(255));
+     rect(0, 200, 400, 200);  
+}
+
+
 
 
 
